@@ -1,0 +1,57 @@
+:root {
+  --primary:           #dc3bcc;
+  --primary-hover:     #c322b3;
+  --primary-light:     #e87cdd;
+  --bg-main:           #f6f2f6;
+  --bg-card:           #fcfcfc;
+  --text-main:         #1e141d;
+  --text-secondary:    #493647;
+  --text-muted:        #7e677b;
+  --border:            #dac7d8;
+  --success:           #2db75b;
+  --error:             #dc3b3b;
+  --warning:           #f3a724;
+}
+
+[data-theme="dark"] {
+  --bg-main:           #1a0e19;
+  --bg-card:           #291827;
+  --bg-input:          #3d283b;
+  --text-main:         #f6f3f6;
+  --text-secondary:    #cdc0cc;
+  --border:            #543a51;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app { text-align: center; }
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover { background: var(--primary-hover); }
